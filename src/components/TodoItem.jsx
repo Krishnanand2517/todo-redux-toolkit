@@ -1,4 +1,12 @@
+import { useDispatch } from 'react-redux';
+import { removeTodo } from '../features/todo/todoSlice';
+
 const TodoItem = ({ todo }) => {
+    const dispatch = useDispatch();
+
+    const removeHandler = () => {
+        dispatch(removeTodo(todo.id));
+    };
 
     return (
         <div className="bg-gray-900 rounded-lg p-4 my-4 flex justify-between items-center">
@@ -21,6 +29,7 @@ const TodoItem = ({ todo }) => {
                     </svg>
                 </button>
                 <button
+                    onClick={removeHandler}
                     className="text-white bg-red-500 border-0 py-1 px-4 focus:outline-none hover:bg-red-600 rounded text-md"
                 >
                     <svg
