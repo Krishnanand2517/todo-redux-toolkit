@@ -22,13 +22,13 @@ const TodoItem = ({ todo }) => {
     };
 
     return (
-        <div className="bg-gray-900 rounded-lg p-4 my-4 flex justify-between items-center">
+        <div className="bg-gray-900 hover:bg-gray-950 rounded-lg p-2 my-4 flex justify-between items-center">
             <input
                 type="text"
                 value={editedText}
                 onChange={(e) => setEditedText(e.target.value)}
                 readOnly={!isEditing}
-                className="bg-transparent w-2/3 max-w-md"
+                className={`p-2 border-2 border-transparent outline-none rounded-lg bg-transparent w-2/3 max-w-md ${isEditing ? "border-white" : ""}`}
             />
             <div>
                 {isEditing ? (
@@ -40,7 +40,7 @@ const TodoItem = ({ todo }) => {
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
-                            strokeWidth={1.5}
+                            strokeWidth={1.3}
                             stroke="currentColor"
                             className="w-6 h-6"
                         >
