@@ -13,6 +13,9 @@ const todoSlice = createSlice({
     name: 'todo',
     initialState,
     reducers: {
+        setTodos: (state, action) => {
+            state.todos = action.payload;
+        },
         addTodo: (state, action) => {
             const newTodoObject = {
                 id: nanoid(),
