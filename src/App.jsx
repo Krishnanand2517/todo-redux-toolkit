@@ -1,10 +1,12 @@
-
+import { TodoForm } from './components';
 
 const App = () => {
 
   return (
-    <div className="p-4 bg-slate-500">
-      <h1 className="text-3xl text-center text-orange-400">Radhe Radhe</h1>
+    <div className="py-4 min-h-screen bg-slate-800 text-white">
+      <div className="w-full max-w-2xl mx-auto">
+        <TodoForm />
+      </div>
     </div>
   );
 };
