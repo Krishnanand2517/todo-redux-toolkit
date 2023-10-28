@@ -11,6 +11,7 @@ const TodoForm = () => {
         e.preventDefault();
 
         dispatch(addTodo(todoText));
+        setTodoText("");
     };
 
     return (

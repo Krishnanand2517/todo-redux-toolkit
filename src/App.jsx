@@ -1,4 +1,4 @@
-import { TodoForm, TodoItem } from './components';
+import { TodoForm, TodoList } from './components';
 
 const App = () => {
 
@@ -7,8 +7,7 @@ const App = () => {
       <div className="w-full max-w-2xl mx-auto">
         <TodoForm />
         <h2 className="text-2xl text-center font-black">Tasks</h2>
-        <TodoItem />
-        <TodoItem />
+        <TodoList />
       </div>
     </div>
   );

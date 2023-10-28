@@ -1,11 +1,9 @@
-
-
-const TodoItem = () => {
+const TodoItem = ({ todo }) => {
 
     return (
         <div className="bg-gray-900 rounded-lg p-4 my-4 flex justify-between items-center">
             <div>
-                Task 1
+                {todo.text}
             </div>
             <div>
                 <button
