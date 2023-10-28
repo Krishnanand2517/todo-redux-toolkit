@@ -21,7 +21,11 @@ const todoSlice = createSlice({
 
             state.todos.push(newTodo);
         },
-        removeTodo: (state, action) => {},
+        removeTodo: (state, action) => {
+            const todoId = action.payload;
+
+            state.todos = state.todos.filter((todo) => todo.id !== todoId);
+        },
         updateTodo: (state, action) => {}
     }
 });
