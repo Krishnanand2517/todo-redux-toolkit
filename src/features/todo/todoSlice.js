@@ -13,7 +13,14 @@ const todoSlice = createSlice({
     name: 'todo',
     initialState,
     reducers: {
-        addTodo: (state, action) => {},
+        addTodo: (state, action) => {
+            const newTodo = {
+                id: nanoid(),
+                text: action.payload
+            };
+
+            state.todos.push(newTodo);
+        },
         removeTodo: (state, action) => {},
         updateTodo: (state, action) => {}
     }
