@@ -2,7 +2,7 @@
 
 const TodoForm = () => {
     return (
-        <form className="flex justify-center mt-12">
+        <form className="flex justify-center mt-12 mb-16">
             <input
                 type="text"
                 className="w-full bg-gray-600 rounded-l-lg px-4"
